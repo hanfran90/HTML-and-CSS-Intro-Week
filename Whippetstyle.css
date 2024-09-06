@@ -1,7 +1,7 @@
 * {
     background-color: aliceblue;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -34,13 +34,11 @@ footer{
 }
 
 .Intro {
-    color: red;
+    color: rgb(138, 52, 52);
 }
 
 .Guide {
-    color:aqua;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    color:rgb(105, 192, 18);
 }
 
 .Links {
@@ -61,3 +59,19 @@ footer{
     border-radius: 50%;
     border: 5px solid black;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    background-color: #d55fbf;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(29, 59, 213, 0.8);
+    border: 5px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
