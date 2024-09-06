@@ -2,6 +2,36 @@
     background-color: aliceblue;
 }
 
+body {
+    font-style: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 100%
+}
+
+h1 {
+    font-size: 3em
+}
+
+h2{
+    font-size: 2em
+}
+
+h3{
+    font-size: 1.5em
+}
+
+.Links {
+    font-size: 1.25em
+}
+
+.ul {
+    color:darkslateblue
+}
+
+.ol {
+    color:midnightblue
+}
+
 #oldWhippets {
     height: 250px;
     width: 500px;
