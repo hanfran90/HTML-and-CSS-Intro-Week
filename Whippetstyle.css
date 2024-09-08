@@ -1,44 +1,44 @@
 * {
-    background-color: aliceblue;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-style: normal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 100%
 }
 
-h1 {
-    font-size: 3em;
+.header {
+    grid-area: header;
+    background-color: white;
+    align-content: center;
     text-align: center;
+    padding-top: 20px;
+    
 }
 
-nav{
-    border-style: dotted;
-    border-radius: 20px;
+.contents {
+    grid-area: contents;
+    align-content: center;
     text-align: center;
+    background-color: green;
+ }
+
+.intro {
+    grid-area: intro;
+    background-color: blue;
 }
 
-h2{
-    font-size: 2em;
+.guide {
+    grid-area: guide;
+    background-color: pink;
 }
 
-h3{
-    font-size: 1.5em;
-}
-
-footer{
+.footer {
+    grid-area: footer;
+    background-color: white;
+    align-self: center;
     text-align: center;
-}
-
-.Intro {
-    color: rgb(138, 52, 52);
-}
-
-.Guide {
-    color:rgb(105, 192, 18);
 }
 
 .Links {
@@ -47,31 +47,38 @@ footer{
 
 .ul {
     color:darkslateblue;
+    list-style-position: inside;
 }
 
 .ol {
     color:midnightblue;
+    list-style-position: inside;
 }
 
 #oldWhippets {
+    grid-area: oldWhippets;
     height: 250px;
     width: 500px;
     border-radius: 50%;
-    border: 5px solid black;
+    border: 2px solid black;
 }
 
-
-.grid-container {
+.grid {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    background-color: #d55fbf;
-    padding: 10px;
-  }
-  .grid-item {
-    background-color: rgba(29, 59, 213, 0.8);
-    border: 5px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
+    background-color: white;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 70px 100px 1fr 1fr 50px;
+    gap: 20px;
+    grid-template-areas: 
+    ". header header ."
+    ". contents contents ."
+    ". intro oldWhippets ."
+    ". . guide ."
+    ". footer footer .";
+}
+
+@media (max-width: 500px )
+    { .grid, .intro, .guide, .oldWhippets{
+        flex-direction: column;
+    }
+}
