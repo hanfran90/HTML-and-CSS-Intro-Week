@@ -1,75 +1,76 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 100%
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 100%;
+  width: 100%;
 }
 
 .header {
-    grid-area: header;
-    background-color: white;
-    align-content: center;
-    text-align: center;
-    padding-top: 20px;
-    
+  grid-area: header;
+  background-color: white;
+  align-content: center;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .contents {
-    grid-area: contents;
-    align-content: center;
-    text-align: center;
-    background-color: green;
- }
+  grid-area: contents;
+  align-content: center;
+  text-align: center;
+  background-color: green;
+}
 
 .intro {
-    grid-area: intro;
-    background-color: blue;
+  grid-area: intro;
+  background-color: blue;
 }
 
 .guide {
-    grid-area: guide;
-    background-color: pink;
+  grid-area: guide;
+  background-color: pink;
 }
 
 .footer {
-    grid-area: footer;
-    background-color: white;
-    align-self: center;
-    text-align: center;
+  grid-area: footer;
+  background-color: white;
+  align-self: center;
+  text-align: center;
 }
 
 .Links {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 .ul {
-    color:darkslateblue;
-    list-style-position: inside;
+  color: darkslateblue;
+  list-style-position: inside;
 }
 
 .ol {
-    color:midnightblue;
-    list-style-position: inside;
+  color: midnightblue;
+  list-style-position: inside;
 }
 
 #oldWhippets {
-    grid-area: oldWhippets;
-    height: 250px;
-    width: 500px;
-    border-radius: 50%;
-    border: 2px solid black;
+  grid-area: oldWhippets;
+  height: 250px;
+  width: 500px;
+  border-radius: 50%;
+  border: 2px solid black;
 }
 
 .grid {
-    display: grid;
-    background-color: white;
-    grid-template-columns: 1fr 500px 500px 1fr;
-    grid-template-rows: 70px 100px 1fr 1fr 50px;
-    gap: 20px;
-    grid-template-areas: 
+  display: grid;
+  background-color: white;
+  grid-template-columns: 1fr 500px 500px 1fr;
+  grid-template-rows: 70px 100px 1fr 1fr 50px;
+  gap: 20px;
+  grid-template-areas:
     ". header header ."
     ". contents contents ."
     ". intro oldWhippets ."
@@ -77,8 +78,19 @@ body {
     ". footer footer .";
 }
 
-@media (max-width: 500px )
-    { .grid, .intro, .guide, .oldWhippets{
-        flex-direction: column;
-    }
+@media screen and (max-width: 750px) {
+  .grid {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 100px 1fr 300px 1fr 50px;
+    gap: 20px;
+    grid-template-areas:
+      "header"
+      "contents"
+      "intro"
+      "oldWhippets"
+      "guide"
+      "footer";
+  }
 }
