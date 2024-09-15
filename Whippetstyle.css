@@ -59,14 +59,17 @@ body {
 #oldWhippets {
   grid-area: oldWhippets;
   height: 250px;
-  width: 500px;
+  width: 450px;
   border-radius: 50%;
   border: 2px solid black;
+  margin-left: 10px;
 }
 
 .grid {
   display: grid;
   background-color: white;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 1fr 500px 500px 1fr;
   grid-template-rows: 70px 100px 1fr 1fr 50px;
   gap: 20px;
@@ -78,19 +81,21 @@ body {
     ". footer footer .";
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 500px) {
   .grid {
     display: grid;
     background-color: white;
-    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 10px 480px 10px;
     grid-template-rows: 70px 100px 1fr 300px 1fr 50px;
     gap: 20px;
     grid-template-areas:
-      "header"
-      "contents"
-      "intro"
-      "oldWhippets"
-      "guide"
-      "footer";
+      ". header ."
+      ". contents ."
+      ". intro ."
+      ". oldWhippets ."
+      ". guide ."
+      ". footer .";
   }
 }
